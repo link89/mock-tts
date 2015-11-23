@@ -1,0 +1,4 @@
+mock-tts
+
+example:
+curl -X POST -d '{"text":"[1234](1000)[4321]"}' -H 'Content-Type:application/json' 127.0.0.1:5000/v1/tts > test.wav
