@@ -37,7 +37,11 @@ class Tts(Resource):
 
     @classmethod
     def pre_recording_to_wav(cls, token):
-        return ''
+        wav = cls.custom.get(token)
+        if wav:
+            return wav
+        else:
+            return ''
 
     @classmethod
     def money_to_wav(cls, token):
