@@ -9,6 +9,7 @@ def load_media(path):
         name, ext = os.path.splitext(f)
         wav = wave.open(os.path.join(path, f), 'r')
         media[name] = wav.readframes(wav.getnframes())
+        wav.close()
     return media
 
 class Tts(Resource):
