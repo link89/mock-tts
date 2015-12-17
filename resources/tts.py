@@ -13,7 +13,7 @@ def load_media(path):
     return media
 
 class Tts(Resource):
-    sampleRate = 22050  # sample rate in Hz
+    sampleRate = 8000   # sample rate in Hz
     sampleWidth = 2     # sample width in byte
     channel = 1
 
